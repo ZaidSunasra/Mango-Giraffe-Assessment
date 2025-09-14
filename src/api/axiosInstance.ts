@@ -1,7 +1,7 @@
 import axios from "axios"
 
 export const axiosInstance = axios.create({
-    baseURL: "https://dg-sandbox.setu.co/api"
+    baseURL: "/api"
 });
 
 export default axiosInstance;
