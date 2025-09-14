@@ -27,7 +27,9 @@ const LandingPage = () => {
                         <Button size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90 px-8 py-3" onClick={() => navigate("/settings")}>
                             Sign Your Document Now
                         </Button>
-                        <Button variant="outline" size="lg" className="px-8 py-3 bg-transparent">
+                        <Button variant="outline" size="lg" className="px-8 py-3 bg-transparent"
+                        onClick={() => window.open("https://drive.google.com/file/d/10Y3m99MEaexcgYd2ESmKc24CcnqK1mwc/view", "_blank")}
+                        >
                             Watch Demo
                         </Button>
                     </div>
