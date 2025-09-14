@@ -1,5 +1,6 @@
 import { Settings, Upload, FileCheck, Shield } from "lucide-react"
 import { Sidebar, SidebarContent, SidebarGroup, SidebarGroupContent, SidebarGroupLabel, SidebarHeader, SidebarMenu, SidebarMenuButton, SidebarMenuItem, SidebarProvider, SidebarSeparator, SidebarTrigger } from "@/components/ui/sidebar"
+import { Link } from "react-router";
 
 const navigationItems = [
     {
@@ -23,6 +24,7 @@ const navigationItems = [
 ]
 
 const AppSidebar = () => {
+
     return (
         <div className="flex min-h-screen bg-accent">
             <SidebarProvider>
@@ -45,10 +47,10 @@ const AppSidebar = () => {
                                     {navigationItems.map((item) => (
                                         <SidebarMenuItem key={item.title}>
                                             <SidebarMenuButton asChild tooltip={item.description} className="w-full">
-                                                <a href={item.url} className="flex items-center gap-3">
+                                                <Link to={item.url} className="flex items-center gap-3">
                                                     <item.icon className="h-4 w-4" />
                                                     <span>{item.title}</span>
-                                                </a>
+                                                </Link>
                                             </SidebarMenuButton>
                                         </SidebarMenuItem>
                                     ))}
